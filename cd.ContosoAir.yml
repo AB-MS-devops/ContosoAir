@@ -25,7 +25,7 @@ steps:
     project: '7d0c5acc-3ecf-4515-ab62-4c1e5ef63382'
     definition: '3'
     buildVersionToDownload: 'latest'
-    targetPath: '$(Pipeline.Workspace)
+    targetPath: '$(Pipeline.Workspace)'
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
@@ -47,7 +47,4 @@ steps:
     WebAppName: '$(web_prefix)-$(web_site)-$(web_environment)'
     packageForLinux: '$(Pipeline.Workspace)/**/*.zip'
     
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
